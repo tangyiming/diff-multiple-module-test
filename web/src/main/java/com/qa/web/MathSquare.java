@@ -8,4 +8,8 @@ public class MathSquare {
     public int squareRoot(int num) {
         return (int) Math.sqrt(num);
     }
+
+    public int squareRoot2(int num) {
+        return (int) Math.sqrt(num);
+    }
 }

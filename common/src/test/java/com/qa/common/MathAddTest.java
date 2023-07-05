@@ -11,4 +11,9 @@ class MathAddTest {
         MathAdd math = new MathAdd();
         assertEquals(2, math.add(1, 1));
     }
+    @Test
+    void add2() {
+        MathAdd math = new MathAdd();
+        assertEquals(3, math.add(1, 1, 1));
+    }
 }

@@ -11,4 +11,9 @@ class MathSubTest {
         MathSub math = new MathSub();
         assertEquals(0, math.sub(1, 1));
     }
+    @Test
+    void sub2() {
+        MathSub math = new MathSub();
+        assertEquals(-1, math.sub(1, 1, 1));
+    }
 }
