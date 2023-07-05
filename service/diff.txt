@@ -1,0 +1,79 @@
+diff --git a/.gitignore b/.gitignore
+index 9358ed3..0221893 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,2 +1,3 @@
+ .idea
+-target/
+\ No newline at end of file
++target/
++diff.txt
+\ No newline at end of file
+diff --git a/common/src/main/java/com/qa/common/MathAdd.java b/common/src/main/java/com/qa/common/MathAdd.java
+index c5d2346..b656d26 100644
+--- a/common/src/main/java/com/qa/common/MathAdd.java
++++ b/common/src/main/java/com/qa/common/MathAdd.java
+@@ -4,4 +4,7 @@ public class MathAdd {
+     public int add(int num1, int num2) {
+         return num1 + num2;
+     }
++    public int add(int num1, int num2, int num3) {
++        return num1 + num2 + num3;
++    }
+ }
+diff --git a/common/src/test/java/com/qa/common/MathAddTest.java b/common/src/test/java/com/qa/common/MathAddTest.java
+index 5947b72..7f10565 100644
+--- a/common/src/test/java/com/qa/common/MathAddTest.java
++++ b/common/src/test/java/com/qa/common/MathAddTest.java
+@@ -11,4 +11,9 @@ class MathAddTest {
+         MathAdd math = new MathAdd();
+         assertEquals(2, math.add(1, 1));
+     }
++    @Test
++    void add2() {
++        MathAdd math = new MathAdd();
++        assertEquals(3, math.add(1, 1, 1));
++    }
+ }
+\ No newline at end of file
+diff --git a/service/src/main/java/com/qa/service/MathSub.java b/service/src/main/java/com/qa/service/MathSub.java
+index 58f8b09..43c79dc 100644
+--- a/service/src/main/java/com/qa/service/MathSub.java
++++ b/service/src/main/java/com/qa/service/MathSub.java
+@@ -8,4 +8,8 @@ public class MathSub {
+     public int sub(int num1, int num2, int num3) {
+         return num1 - num2 - num3;
+     }
++
++    public int sub(int num1, int num2, int num3, int num4) {
++        return num1 - num2 - num3 - num4;
++    }
+ }
+diff --git a/service/src/test/java/com/qa/service/MathSubTest.java b/service/src/test/java/com/qa/service/MathSubTest.java
+index 2b20c02..aea6fc6 100644
+--- a/service/src/test/java/com/qa/service/MathSubTest.java
++++ b/service/src/test/java/com/qa/service/MathSubTest.java
+@@ -11,4 +11,9 @@ class MathSubTest {
+         MathSub math = new MathSub();
+         assertEquals(0, math.sub(1, 1));
+     }
++    @Test
++    void sub2() {
++        MathSub math = new MathSub();
++        assertEquals(-1, math.sub(1, 1, 1));
++    }
+ }
+\ No newline at end of file
+diff --git a/web/src/main/java/com/qa/web/MathSquare.java b/web/src/main/java/com/qa/web/MathSquare.java
+index 254504a..4382a4a 100644
+--- a/web/src/main/java/com/qa/web/MathSquare.java
++++ b/web/src/main/java/com/qa/web/MathSquare.java
+@@ -8,4 +8,8 @@ public class MathSquare {
+     public int squareRoot(int num) {
+         return (int) Math.sqrt(num);
+     }
++
++    public int squareRoot2(int num) {
++        return (int) Math.sqrt(num);
++    }
+ }
